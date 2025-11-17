@@ -108,8 +108,8 @@ export const options = {
             stages: [
                 { duration: '2m', target: 900 },   // 워밍업
                 { duration: '10m', target: 9000 }, // 램프업
-                { duration: '60m', target: 9000 }, // 유지
-                { duration: '5m', target: 0 },     // 램프다운
+                { duration: '5m', target: 9000 }, // 유지
+                { duration: '1m', target: 0 },     // 램프다운
             ],
         },
         // 시나리오 2: 쓰기 유저 (10%)
@@ -120,8 +120,8 @@ export const options = {
             stages: [
                 { duration: '2m', target: 100 },   // 워밍업
                 { duration: '10m', target: 1000 }, // 램프업
-                { duration: '60m', target: 1000 }, // 유지
-                { duration: '5m', target: 0 },     // 램프다운
+                { duration: '5m', target: 1000 }, // 유지
+                { duration: '1m', target: 0 },     // 램프다운
             ],
         },
         // 시나리오 3: 스파이크 테스트 (Vani님 설정)
@@ -129,7 +129,7 @@ export const options = {
             executor: 'ramping-vus',
             exec: 'readUserScenario', // 스파이크는 읽기 유저로 가정
             startVUs: 0,
-            startTime: '40m', // 40분 후에 시작
+            startTime: '13m', // 40분 후에 시작
             stages: [
                 { duration: '1m', target: 4500 },
                 { duration: '5m', target: 4500 },
